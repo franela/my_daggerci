@@ -6,5 +6,5 @@ import (
 )
 
 func TestFoo(t *testing.T) {
-	fmt.Println("testeanding 📯📯📯")
+	fmt.Println("testeandin 📯📯📯")
 }
