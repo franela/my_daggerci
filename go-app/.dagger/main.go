@@ -26,7 +26,8 @@ func (m *GoApp) Test(ctx context.Context,
 	// +defaultPath="."
 	src *dagger.Directory,
 ) (string, error) {
-	return dag.Container().From("golang:alpine").WithMountedDirectory("/app", src).
+	return dag.Container().From("golang:alpine").
+		WithMountedDirectory("/app", src).
 		WithWorkdir("/app").
 		WithExec([]string{"go", "test", "-v", "./..."}).Stdout(ctx)
 
